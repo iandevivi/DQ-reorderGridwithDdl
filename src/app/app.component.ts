@@ -87,27 +87,22 @@ export class AppComponent implements OnInit {
     this.editService.read();
   }
 
-  public addHandler({sender}): void {
-
-    
-
+  public addHandler({ sender }): void {
     this.formGroup = new FormGroup({
-        'name': new FormControl('tgesgdfgdfgdfg')
-      });
+      name: new FormControl('AUM'),
+    });
 
-      sender.addItem(this.formGroup);
+    this.isNew = true;
 
-      this.isNew = true;
+    this.grid.addRow(this.formGroup);
 
-    //   this.grid.addRow(this.formGroup);
-
-// this.editService.save([{ name: 'AUM' }], true);
+    // this.editService.save([{ name: 'AUM' }], true);
 
     // const formGroup = new FormGroup({
     //     'name': new FormControl('jijiji')
     //   });
 
-// this.editService.next([{ name: 'AUM' }])
+    // this.editService.next([{ name: 'AUM' }])
 
     // this.closeEditor();
 
@@ -121,8 +116,8 @@ export class AppComponent implements OnInit {
 
     // this.grid.addRow(this.formGroup);
 
-   // Here we add a new row and edit it using editRow method https://www.telerik.com/kendo-angular-ui/components/grid/api/GridComponent/#toc-editrow
-   
+    // Here we add a new row and edit it using editRow method https://www.telerik.com/kendo-angular-ui/components/grid/api/GridComponent/#toc-editrow
+
     // this.view.push({});
     // this.grid.editRow(this.view.length - 1, this.formGroup)
     // this.editedRowIndex = this.view.length - 1;
